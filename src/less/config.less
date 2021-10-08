@@ -1,0 +1,89 @@
+// USER VARIABLES SECTION
+
+@accent: #ffd95e; // Accent Color
+@fontsize: 16px; // Body Font Size
+@lineheight: 1.875; // Document Line Height
+@white: #ffffff;
+@black: #2c2b29;
+@green: #97a277;
+@light_yellow: #ece0b8;
+@blue: #365069;
+@light_blue: #6d8ca9;
+@grey: #e1e1e1;
+
+
+@userfont: 'Roboto Condensed', sans-serif;
+@systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+.reset();
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.container {
+	.wrapper();
+}
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: @accent;
+	color: #fff;
+}
+
+// input, textarea {
+// 	outline: none;
+// 	&:focus:required:invalid { border: 3px solid @accent }
+// 	&:required:valid { border: 3px solid green }
+// }
+
+// .scroll-disabled {
+//   overflow: hidden;
+// }
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+
+	font-family: @userfont;
+	font-size: @fontsize;
+	font-weight: 300;
+	// line-height: @lineheight;
+	color: @black;
+	min-width: 320px;
+	min-height: 100vh;
+	position: relative;
+	// overflow-x: hidden;
+}
+
+body:not(.home) {
+	section {
+		padding-top: 35px;
+	}
+}
+
+section, header, footer {
+  position: relative;
+  z-index: 1;
+}
+
+.section-header {
+	font-weight: 700;
+	font-size: 57px;
+	line-height: 1;
+	letter-spacing: -0.02em;
+}
+
