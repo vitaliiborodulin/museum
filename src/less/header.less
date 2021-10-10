@@ -1,4 +1,6 @@
 .header {
+
+    //header-top
     &__top {
         color: @white;
         background-color: @blue;
@@ -20,12 +22,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            .sm-block({
+                flex-wrap: wrap;
+                justify-content: center;
+            });
+
         }
     }
 
     &__contacts, &__adress, &__email {
         display: flex;
-        align-items: center;
+        // align-items: center;
+        .sm(justify-content, center);
         font-size: 13px;
 
         svg {
@@ -33,11 +42,29 @@
         }
     }
 
+    &__contacts {
+        flex-wrap: wrap;
+        
+    }
+
     &__adress, &__email {
         margin-right: 30px;
+        .lg(margin-bottom, 5px);
+    }
+    
+    &__adress {
+        .sm-block({
+            margin-right: 0;
+            text-align: center;
+        });
+    }
+
+    &__tel {
+        margin-bottom: 5px;
     }
 
     &__social {
+        margin: 0 5px;
         display: flex;
 
         li+li {
@@ -53,14 +80,51 @@
 
         &-wrapper {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
+            .sm(justify-content, center);
         }
+    }
+
+    &__form {
+        position: relative;
+        max-width: 100%;
+        margin: 10px 5px 0;
+        .xl(display, none);
+    }
+
+    &__input {
+        max-width: 100%;
+        width: 460px;
+        padding: 12px 19px;
+        padding-right: 30px;
+        background-color: #fcfcfc;
+        border: 1px solid #dfdfdf;
+        border-radius: 15px;
+
+        &:focus {
+            outline: 1px solid @accent;
+        }
+    }
+
+    &__submit {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 0;
+        width: 19px;
+        height: 19px;
+        border: none;
+        background: url(../img/header-search.svg) no-repeat center;
+        cursor: pointer;
     }
 
     &__btn {
         display: flex;
         align-items: center;
+        margin: 10px 5px 0;
         padding: 15px 20px;
         
         color: @black;
@@ -80,6 +144,8 @@
     }
 
     &__time {
+        margin: 10px 5px 0;
+
         p {
             font-size: 15px;
             b {
@@ -93,41 +159,12 @@
         }
     }
 
-    // header-bottom (menu)
+    // header-bottom 
 
     &__bottom {
         background-color: #f1f1f1;
 
-        .sub-menu {
-            display: none;
-        }
-
-        .current-menu-item {
-            a {
-                color: @white;
-                background-color: @light_blue;
-                border-radius: 10px;
-            }
-        }
     }
 
-    &__menu {
-        display: flex;
-
-        a {
-            display: inline-block;
-            padding: 15px 13px;
-
-            color: inherit;
-            font-weight: 400;
-            text-decoration: none;
-            transition: all 0.3s ease;
-
-            &:hover {
-                color: @white;
-                background-color: @blue;
-                border-radius: 10px;
-            }
-        }
-    }
+    //see header-menu.less
 }

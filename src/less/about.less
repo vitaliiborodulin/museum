@@ -1,25 +1,37 @@
 .about {
     &__content {
         .row-flex();
+        // flex-wrap: nowrap;
         // align-items: center;
     }
 
     &__text {
         .col();
         .size(8);
+        .size-md(12);
         margin-bottom: 80px;
 
         p, div {
-            margin: 20px 0;
+            margin-bottom: 20px;
+            .md-block({
+                margin: 20px 0;
+            })
         }
+    }
+
+    &__header {
+        margin-bottom: 20px;
     }
 
     &__image {
         .col();
         .size(4);
-        width: 367px;
-        height: auto;
+        .size-md(12);
+        // width: 367px;
+        // height: auto;
         border-radius: 20px;
+
+        .md(order, -1);
 
         img {
             border-radius: 20px;
