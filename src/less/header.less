@@ -39,24 +39,38 @@
 
         svg {
             margin-right: 5px;
+            .md(margin-right, 3px);
         }
     }
 
     &__contacts {
         flex-wrap: wrap;
         
+        &-wrapper {
+            display: flex;
+        }
     }
 
     &__adress, &__email {
         margin-right: 30px;
         .lg(margin-bottom, 5px);
+        .md(margin-right, 0);
+    }
+
+    &__email {
+        .md(margin-right, 5px);
     }
     
     &__adress {
         .sm-block({
+            max-width: 200px;
             margin-right: 0;
-            text-align: center;
+            // text-align: center;
         });
+        
+        svg {
+            flex-shrink: 0;
+        }
     }
 
     &__tel {
@@ -145,6 +159,7 @@
 
     &__time {
         margin: 10px 5px 0;
+        .md(display, none);
 
         p {
             font-size: 15px;

@@ -3,4 +3,5 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     //= components/menu.js
+    //= components/modal.js
 });

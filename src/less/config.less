@@ -62,21 +62,48 @@ body {
 	font-size: @fontsize;
 	font-weight: 300;
 	// line-height: @lineheight;
+	line-height: 1.5;
 	color: @black;
+	min-height: 100vh;
 	min-width: 320px;
 	position: relative;
+	text-rendering: optimizeSpeed;
 	// overflow-x: hidden;
 }
 
 body:not(.home) {
-	section {
+	section > .container {
 		padding-top: 35px;
+		min-height: 100vh;
 	}
+
+	.section-header {
+		margin-bottom: 35px;
+	}
+
+	.section-subheader {
+		// margin-top: -33px;
+		margin-top: -14px;
+		// margin-bottom: 10px;
+		margin-bottom: 33px;
+		font-size: 32px;
+		line-height: 1;
+	}
+}
+
+main {
+	background: url(../img/main-bg.jpg) top center/cover;
 }
 
 section, main, footer {
   position: relative;
   z-index: 1;
+}
+
+section {
+	> .container {
+        background-color: @white;
+    }
 }
 
 header {
@@ -91,6 +118,23 @@ header {
 	letter-spacing: -0.02em;
 }
 
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 // remove cross
 input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }

@@ -1,15 +1,3 @@
-// const menuBtn = $('.header__burger');
-// const menu = $('.header__menu')
-
-// menuBtn.on('click', function() {
-//     $(this).toggleClass('open');
-//     menu.slideToggle(300, function() {
-//         if ($(this).css('display') === "none") {
-//             $(this).removeAttr('style');
-//         }
-//     });
-// });
-
 var menuToggle = 'button.header__menu-toggle';
 var navToMenu = 'div.header__menu';
 
