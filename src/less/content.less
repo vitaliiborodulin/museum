@@ -3,39 +3,36 @@
         padding-bottom: 80px;
     }
 
-    &__row {
-        .row-flex();
-        margin-bottom: 30px;
-    }
-
     &__text {
-        .col();
-        .size(8);
-        .size-md(12);
-        
+        margin-bottom: 30px;
 
         p, div {
             margin-bottom: 20px;
             font-size: 18px;
-
+    
             .md-block({
                 margin: 20px 0;
             })
         }
-    }
-
-    &__image {
-        .col();
-        .size(4);
-        .size-md(12);
-        // width: 367px;
-        // height: auto;
-        border-radius: 20px;
-
-        .md(order, -1);
-
+    
         img {
+            padding-left: 20px;
+            padding-bottom: 20px;
+            float: right;
             border-radius: 20px;
+
+            .md-block({
+                display: block;
+                float: none;
+                padding: 0;
+                max-width: 300px
+            });
+        }
+
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
         }
     }
 
@@ -68,8 +65,10 @@
                     height: 2px;
                     background-color: @black;
                     left: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
+                    top: 10px;
+                    // top: 50%;
+                    // transform: translateY(-50%);
+                    
                 }
             }
 
@@ -107,17 +106,25 @@
         // justify-content: space-between;
     }
 
+    &__list--news {
+        .content__item {
+            .sm(width, 100%);
+        }
+    }
+
     &__item {
         // margin-top: 30px;
+        margin: 0 10px;
         margin-bottom: 30px;
-        margin-right: 20px;
         width: 218px;
         display: flex;
         flex-direction: column;
         .sm-block({
+            margin: 0 5px;
+            margin-bottom: 15px;
             flex-direction: row;
             justify-content: center;
-            width: 100%;
+            width: 45%;
         });
     }
 
@@ -158,6 +165,8 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
 
+        .sm(margin-bottom, 5px);
+
         a {
             text-decoration: none;
             color: inherit;
@@ -174,7 +183,9 @@
     .content {
         &__item {
             width: 272px;
-            .sm(flex-direction, column);
+            .sm-block({
+                flex-direction: column;
+            });
         }
         
         &__item-image {
@@ -194,3 +205,11 @@
         }
     }
 }
+
+// .single {
+//     .content {
+//         &__list {
+//             margin-top: 20px;
+//         }
+//     }
+// }

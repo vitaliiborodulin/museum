@@ -31,10 +31,13 @@
         }
     }
 
-    &__contacts, &__adress, &__email {
+    &__contacts, &__adress, &__email, &__tel {
         display: flex;
-        // align-items: center;
-        .sm(justify-content, center);
+        align-items: center;
+        .sm-block({
+            justify-content: center;
+            align-items: flex-start;
+        });
         font-size: 13px;
 
         svg {
@@ -74,7 +77,9 @@
     }
 
     &__tel {
-        margin-bottom: 5px;
+        flex-wrap: wrap;
+        // margin-bottom: 5px;
+        .lg(margin-bottom, 5px);
     }
 
     &__social {
