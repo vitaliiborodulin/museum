@@ -89,6 +89,11 @@
         li+li {
             margin-left: 10px;
         }
+
+        svg:hover path {
+            fill: @accent;
+            transition: all ease 0.3s;
+        }
     }
 
     // header-middle
@@ -141,25 +146,9 @@
     }
 
     &__btn {
-        display: flex;
-        align-items: center;
         margin: 10px 5px 0;
         padding: 15px 20px;
-        
-        color: @black;
-        background-color: @light_yellow;
-
         font-size: 16px;
-        transition: all 0.3s ease;
-
-        &:hover {
-            color: @white;
-            background-color: @light_blue;
-        }
-
-        svg {
-            margin-right: 5px;
-        }
     }
 
     &__time {

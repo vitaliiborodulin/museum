@@ -1,0 +1,74 @@
+.contacts {
+    &__header {
+        margin-bottom: 27px;
+    }
+
+    &__content {
+        .row-flex();
+        align-items: center;
+    }
+
+    &__info {
+        .col();
+        .size(4);
+        .size-lg(5);
+        .size-md(12);
+    }
+
+    &__map {
+        .col();
+        .size(8);
+        .size-lg(7);
+        .size-md(12);
+    }
+
+    &__item {
+        margin-bottom: 12px;
+    }
+
+    &__title {
+        margin-bottom: 2px;
+        font-size: 24px;
+        color: #6c6c6c;
+    }
+
+    &__text {
+        font-size: 17px;
+        line-height: 24px;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: @accent;
+            }
+        }
+    }
+
+    &__social {
+        margin-top: 24px;
+        display: flex;
+
+        li {
+            margin-right: 15px;
+        }
+
+        svg:hover path {
+            fill: @accent;
+            transition: all ease 0.3s;
+        }
+    }
+
+    &__map {
+        height: 350px;
+        border-radius: 23px;
+        overflow: hidden;
+        background: url(../img/map.jpg) no-repeat center/cover;
+
+        .ymaps-2-1-79-gototech, .ymaps-2-1-79-gotoymaps__container {
+            display: none;
+        }
+    }
+}

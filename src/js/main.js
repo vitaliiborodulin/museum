@@ -2,6 +2,8 @@
 
 
 document.addEventListener("DOMContentLoaded", function() {
+    //= components/slider.js
     //= components/menu.js
     //= components/modal.js
+    //= components/map.js
 });

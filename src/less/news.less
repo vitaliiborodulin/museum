@@ -3,42 +3,6 @@
         margin-bottom: 35px;
     }
 
-    &__descr {
-        margin-bottom: 10px;
-        font-size: 15px;
-
-        min-height: 68px;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-
-        .sm-block({
-            -webkit-line-clamp: 3;
-        });
-    }
-
-    &__link {
-        position: relative;
-        display: block;
-        text-align: right;
-
-        // font-style: italic;
-        font-size: 13px;
-        color: inherit;
-        transition: color 0.3s ease;
-
-        &::after {
-            position: relative;
-            content: ' >>';
-            right: 0;
-        }
-
-        &:hover {
-            color: @accent;
-        }
-    }
-
     &__btn {
         .sm-block({
             display: block;

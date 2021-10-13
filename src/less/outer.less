@@ -1,6 +1,8 @@
 .outer {
-    padding-top: 40px;
-    padding-bottom: 65px;
+    > .container {
+        padding-top: 40px;
+        padding-bottom: 65px;
+    }
     
     &__list {
         display: flex;
@@ -10,6 +12,10 @@
         padding: 60px 40px 50px;
         background-color: #f6f6f6;
         border-radius: 30px;
+
+        .md-block({
+            padding: 50px 15px;
+        });
 
         li {
             // .col();
