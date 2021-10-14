@@ -10,6 +10,9 @@ if ($('body').hasClass('home')) {
             controls: []
         });
 
+        myMap.behaviors.disable('scrollZoom');
+        // myMap.behaviors.disable('drag');
+
         myPlacemark = new ymaps.Placemark([62.157258, 73.596215], {
             hintContent: 'Мы находимся тут',
             balloonContent: `Ханты-Мансийский автономный округ–Югра,

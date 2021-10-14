@@ -56,9 +56,9 @@ const cssProd = () => {
         .pipe(less())
         .pipe(gcmq())
         .pipe(autoprefixer())
-        .pipe(cleanCss({
-            level: 2
-        }))
+        // .pipe(cleanCss({
+        //     level: 2
+        // }))
         .pipe(gulp.dest(dist + "/css"))
         .pipe(sync.stream());
 }
@@ -97,9 +97,9 @@ const jsProd = () => {
         })
         .pipe(rigger())
         // .pipe(concat('script.js'))
-        .pipe(uglify({
-            toplevel: true
-        }))
+        // .pipe(uglify({
+        //     toplevel: true
+        // }))
         .pipe(gulp.dest(dist + "js"))
         .pipe(sync.stream())
 }
