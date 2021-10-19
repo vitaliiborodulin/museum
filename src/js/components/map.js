@@ -1,7 +1,7 @@
-if ($('body').hasClass('home')) {
+if ($('body').hasClass('home') || $('body').hasClass('page-template-page-contacts')) {
     ymaps.ready(init);
-    var myMap;
-    // myPlacemark;
+    var myMap,
+        myPlacemark;
 
     function init() {
         myMap = new ymaps.Map("map", {

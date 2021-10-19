@@ -248,7 +248,7 @@
             width: 586px;
             height: 390px;
             border-radius: 18px;
-            .sm (margin-right, 10px);
+            // .sm (margin-right, 10px);
     
             a {
                 display: block;
@@ -286,6 +286,15 @@
 
         .content__date {
             color: @white;
+        }
+    }
+}
+
+.home, .archive {
+    .content {
+        &__btns {
+            margin-left: 10px;
+            margin-right: 10px;
         }
     }
 }
@@ -392,6 +401,14 @@
                 min-height: 60px;
                 -webkit-line-clamp: 2;
             });
+        }
+    }
+}
+
+body:not(.home) .show {
+    .content {
+        &__btns{
+            margin-top: 30px;
         }
     }
 }
